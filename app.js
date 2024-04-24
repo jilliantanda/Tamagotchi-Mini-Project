@@ -1,37 +1,146 @@
-// //Create an Object or Class (look at your notes on JS Classes if you forgot) for your Tamagotchi
 
-// Instantiate your Tamagotchi (If you created a class)
-const currentHunger = document.querySelector("hunger");
-const currentSleepiness = document.querySelector("sleepiness");
-const currentBoredom = document.querySelector("boredom");
-const currentAge = document.querySelector("age");
-
-
-let hunger = 0;
-let age = 0;
-let boredom = 0;
-let sleepiness = 0;
-
-// const metrics = document.querySelector("#sleepiness", "#hunger", "#age", "#boredom")
+const form = document.getElementById("form")
+const yourName = document.getElementById("name").value
+const currentHunger = document.querySelector("#hunger");
+const currentBoredom = document.querySelector("#boredom");
+const currentSleepiness = document.querySelector("#sleepiness");
+const currentAge = document.querySelector("#age");
+const currentDay = document.querySelector("#day");
+const button1 = document.querySelector("#button1")
+const button2 = document.querySelector("#button2")
+const button3 = document.querySelector("#button3")
 
 
-// class elfGirl {
-//    constructor(hunger, sleepiness, boredom, age){
-//     this.hunger = hunger;
-//     this.sleepiness = sleepiness;
-//     this.boredom = boredom;
-//     this.age = age;
-//    }
-// }
 
-class elfGirl {
-    hunger = 0;
-    sleeepiness = 0;
-    boredom = 0;
-    age = 0;
+let day = 0;
+
+button1.onclick = feed
+button2.onclick = sleep
+button3.onclick = playGame
+
+const interval1 = setInterval(dayIncrease, 5000)
+const interval2 = setInterval(metricIncrease, 3500)
+const interval3 = setInterval(ageUP, 3000)
+
+const intervalChange = setInterval(() => {
+    if (Elf.boredom >= 20 || Elf.hunger >= 20){
+        clearInterval(interval1)
+        clearInterval(interval2)
+        clearInterval(interval3)
+        reset()
+    }
+    else if (Elf.boredom >= 10 && Elf.sleepiness >= 10){
+        clearInterval(interval1)
+        clearInterval(interval2)
+        clearInterval(interval3)
+        reset()
+    } else if (Elf.sleepiness >= 10 && Elf.hunger >= 10){
+        clearInterval(interval1)
+        clearInterval(interval2)
+        clearInterval(interval3)
+        reset ()
+    } else if (Elf.hunger >= 10 && Elf.boredom >= 10) {
+        clearInterval(interval1)
+        clearInterval(interval2)
+        clearInterval(interval3)
+        reset()
+    }
+}, 0) 
+
+
+
+
+
+const Elf = {
+    hunger: 0,
+    sleepiness: 0,
+    boredom: 0,
+    age: 0
+   }
+
+
+
+
+function dayIncrease(){
+    for(let i = 0; i<=0; i++){
+      day ++  
+    }
+    currentDay.innerHTML = day;
 }
 
-// Not sure which way to use yet ^^^^
+function ageUP(){
+    for(let i = 0; i<= 0; i++){
+        Elf.age ++
+    }
+    currentAge.innerHTML = Elf.age;
+}
+
+function Evolution(){
+   if (day === 2) {
+    document.getElementById('img1').src = 'baby-elf.png'
+   }
+        else if (day === 5){
+            document.getElementById('img2').src = 'evolved elf.png'
+        }
+     }
+    
+
+function metricIncrease(){
+    for (let i = 0; i < 1; i++){
+        Elf.hunger += 2
+        Elf.sleepiness += 1
+        Elf.boredom += 1
+    }
+    currentHunger.innerHTML = Elf.hunger;
+    currentSleepiness.innerHTML = Elf.sleepiness;
+    currentBoredom.innerHTML = Elf.boredom;   
+}
+        
+
+function feed(){
+    if (Elf.hunger >= 2){
+        Elf.hunger -= 2
+    }
+    currentHunger.innerHTML = Elf.hunger;
+}
+
+
+function sleep(){
+    if (Elf.sleepiness >= 3){
+        Elf.sleepiness -= 3
+    }
+    currentSleepiness.innerHTML= Elf.sleepiness;
+}
+
+function playGame(){
+    if (Elf.boredom >= 1){
+        Elf.boredom -= 1
+    }
+    currentBoredom.innerHTML= Elf.boredom;
+}
+
+
+function reset(){
+    Elf.boredom = 0
+    Elf.hunger = 0
+    Elf.sleepiness = 0
+    Elf.age = 0
+    day = 0
+    currentHunger.innerHTML = Elf.hunger;
+    currentSleepiness.innerHTML = Elf.sleepiness;
+    currentBoredom.innerHTML = Elf.boredom;   
+    currentAge.innerHTML = Elf.age;
+    currentDay.innerHTML = day;
+}
+
+
+   // if boredom and sleepiness both reach 10 at the same time, character dies. 
+    // if hunger and sleepiness both reach 10 at the same time, character dies.
+    //  if hunger and boredom both reach 10 at the same time, character dies. 
+
+
+
+
 
 // Display a character of your choice on the screen to represent your pet
 
@@ -42,52 +151,23 @@ class elfGirl {
 // Boredom (1-10 scale)
 // Age
 // const 
-setInterval(function () {element.innerHTML += "age"}, 7000);
 
 
-// Add buttons to the screen to feed your pet, turn off the lights, and play with your pet.
+
 // Create buttons to:
     // -feed your pet, -2 per feed berries
     //- make pet sleep  -3
     // - make pet play board game, -1 boredom
 
-function feed(){
-    if (hunger <= 0){
-        hunger -= 2
-    }
-    currentHunger.innerHTML = hunger;
-}
 
 // Add the ability to name your pet.
 
     // Submit box- Welcome to the forest. Please select your characters name
     // Display character name on page. 
-setInterval(metricIncrease, 10000)
+// setInterval(metricIncrease, 10000)
 
 //Display rules-
-function metricIncrease(){
-    for (let i = 0; i <= 20; i++){
-        hunger ++
-        sleepiness ++
-        boredom ++
-    }
-    currentHunger.innerHTML = hunger;
-    currentSleepiness.innerHTML = sleepiness;
-    currentBoredom.innerHtml = boredom;
-}
 
-// function terminate(){
-//     if (elfGirl.hunger === 20){
-
-//     }
-// }
-
-function gameOver(){
-    (elfGirl[0] === 20 && elfGirl[2] === 20) ||
-    (elfGirl[2] && elfGirl[1] === 10) ||
-    (elfGirl[0] && elfGirl[1] === 10) ||
-    (elfGirl[0] && elfGirl [2] === 10)
-}
 
 
 
@@ -105,16 +185,13 @@ function gameOver(){
 // Style the page.
 
 
-// Increase your pet's age every x minutes
-//every 7 seconds increase pet's age
-
-
+// Increase your pet's age every x seconds
 
 
 // Morph your pet at certain ages.
 // start at age 0- creature is an egg-
 // age 5- creature is a baby-
-// age 20- creature is an adult
+// age 15- creature is an adult
 
 
 // Animate your pet across the screen while it's alive.
