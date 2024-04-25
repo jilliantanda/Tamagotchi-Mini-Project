@@ -1,6 +1,6 @@
 
-const form = document.getElementById("form")
-const yourName = document.getElementById("name").value
+// const form = document.getElementById("form")
+// const yourName = document.getElementById("name").value
 const currentHunger = document.querySelector("#hunger");
 const currentBoredom = document.querySelector("#boredom");
 const currentSleepiness = document.querySelector("#sleepiness");
@@ -18,9 +18,19 @@ button1.onclick = feed
 button2.onclick = sleep
 button3.onclick = playGame
 
+
+let player = prompt("Name your elf: ", "Player name")
+if (player != null){
+    document.getElementById("playerName").innerHTML =
+    ", " + player + "!";
+}
+
+
 const interval1 = setInterval(dayIncrease, 5000)
 const interval2 = setInterval(metricIncrease, 3500)
 const interval3 = setInterval(ageUP, 3000)
+
+
 
 const intervalChange = setInterval(() => {
     if (Elf.boredom >= 20 || Elf.hunger >= 20){
@@ -49,8 +59,6 @@ const intervalChange = setInterval(() => {
 
 
 
-
-
 const Elf = {
     hunger: 0,
     sleepiness: 0,
@@ -60,9 +68,8 @@ const Elf = {
 
 
 
-
 function dayIncrease(){
-    for(let i = 0; i<=0; i++){
+    for(let i = 0; i <= 0; i++){
       day ++  
     }
     currentDay.innerHTML = day;
@@ -86,7 +93,7 @@ function Evolution(){
     
 
 function metricIncrease(){
-    for (let i = 0; i < 1; i++){
+    for (let i = 0; i <= 0; i++){
         Elf.hunger += 2
         Elf.sleepiness += 1
         Elf.boredom += 1

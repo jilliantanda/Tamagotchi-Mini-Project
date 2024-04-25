@@ -9,26 +9,72 @@
 
 </head>
 <body>
-<div>
-    <form id="form">
-        <input id="name" placeholder="Enter your name">
-        <button type ="submit">Enter</button>
-    </form>
+
+       <!-- <label for="player">Name your elf:</label><br>
+        <input type="text" id="fname" name="fname" value="Player name"><br>
+        <input type="button" value="Start Playing"> -->
+
+
+<header>
+<div class="name">
+<p> Welcome to the forest<span id="playerName"></p>
 </div>
-    <button id="button1">Feed Berries</button>
-    <button id="button2">Sleep zzz</button>
-    <button id="button3">Play Game</button>
+</header>   
 
-<p> Name: <input id="name"></p>
+
+<div class ="age">
 <p> Age: <span id ="age"></span></p>
-<p> Hunger: <span id ="hunger"></span></p>
-<p> Boredom: <span id="boredom"></span></p>
-<p> Sleepiness: <span id="sleepiness"></span></p>
-<p> Day: <span id ="day"></span></p>
+</div>
 
-<span id="img1"> </pan>
+
+<div class="rules">
+    <p> The rules are simple: </p>
+    <p> Keep your elf alive by eating, sleeping, and playing.</p>
+    <p> If any two stats reach 10 at same time, you elf dies.</p>
+    <p> If hunger OR boredom reach 20,</p>
+    <p></p> your elf will meet the same fate.</p>
+</div>
+
+
+
+
+
+<main>
+
+<div class="day">
+<p> Day: <span id ="day"></span></p>   
+</div>
+
+<div class="hunger">
+ <p> Hunger: <span id ="hunger"></span></p>   
+</div>
+
+<div class="boredom">
+ <p> Boredom: <span id="boredom"></span></p>   
+</div>
+
+<div class="sleepiness">
+<p> Sleepiness: <span id="sleepiness"></span></p>  
+</div>
+
+
+</main>
+
+
+
+<footer>
+
+    <button id="button1" class="button1">Feed Berries</button>
+    <button id="button2" class="button2">Sleep zzz</button>
+    <button id="button3" class="button3">Play Game</button>
+
+</footer>
+
+
+
+<span id="img1"> <span>
 <img id="img2" style="display:none" alt="evolved elf">
- 
+</div>>
     
 </body>
 </html>
