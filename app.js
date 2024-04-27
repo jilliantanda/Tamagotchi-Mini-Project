@@ -7,7 +7,7 @@ const button1 = document.querySelector("#button1")
 const button2 = document.querySelector("#button2")
 const button3 = document.querySelector("#button3")
 const button4 = document.querySelector("#button4")
-
+const button5 = document.querySelector("#button5")
 
 
 button1.onclick = feed
@@ -17,11 +17,13 @@ button4.onclick = lightsOn
 
 
 
+
 let player = prompt("Name your elf: ", "Player name")
 if (player != null){
     document.getElementById("playerName").innerHTML =
     ", " + player + "!";
 }
+
 
 
 const elf = {
@@ -37,8 +39,6 @@ let day = 0;
 
 
 const interval1 = setInterval(dayIncrease, 5000)
-const interval2 = setInterval(metricIncrease, 3500)
-const interval3 = setInterval(ageUP, 3000)
 
 
 function dayIncrease(){
@@ -48,6 +48,8 @@ function dayIncrease(){
     currentDay.innerHTML = day;
 }
 
+const interval3 = setInterval(ageUP, 3000)
+
 function ageUP(){
     for(let i = 0; i<= 0; i++){
         elf.age ++
@@ -56,7 +58,7 @@ function ageUP(){
     evolution()
 }
 
-
+const interval2 = setInterval(metricIncrease, 3500)
 
 
 function metricIncrease(){
@@ -86,11 +88,11 @@ function sleep(){
         elf.hunger += 1
     }
     currentSleepiness.innerHTML= elf.sleepiness;
-    document.body.style.backgroundImage= "url('fantasty-night.jpeg')"
+    document.body.style.backgroundImage= "url('nighttime.gif')"
 }
 
 function lightsOn(){
-    document.body.style.backgroundImage= "url('morning-forest.jpeg')"
+    document.body.style.backgroundImage= "url('daytimes.gif')"
 }
 
 
@@ -150,6 +152,7 @@ const intervalChange = setInterval(() => {
 var deadElf = document.getElementById("dead")
 
 function reset(){
+    document.body.style.backgroundImage= "url('death.gif')"
     adultElf.style.visibility = "hidden"
     deadElf.style.visibility = "visible"
     elf.boredom = 0
