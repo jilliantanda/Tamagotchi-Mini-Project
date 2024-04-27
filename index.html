@@ -8,73 +8,86 @@
     <title>Tama... elf?</title>
 
 </head>
+
+
 <body>
 
-       <!-- <label for="player">Name your elf:</label><br>
-        <input type="text" id="fname" name="fname" value="Player name"><br>
-        <input type="button" value="Start Playing"> -->
+
+
+<div id="container">
+
 
 
 <header>
-<div class="name">
 <p> Welcome to the forest<span id="playerName"></p>
-</div>
 </header>   
+    
+    
+
+<nav>
+
+<a class="rules-button" href="#rules">Click here to read the rules</a>
+<section role="dialog" class="rules" id="rules">
+    <a class="rules-overlay" href="#" tabindex="-1"></a>
+    <div class="rules-content">
+      <a title="Close rules" href="#" class="rules-close">&times; </a>
+      <h2 id="rules-title">The rules are simple! </h2>
+      <p> If any two stats reach 10 at same time, you elf dies.</p>
+<hr class = "break">
+      <p> If hunger OR boredom reach 20,</p>
+      <hr class="break">
+      <p> your elf will meet the same fate.</p>
+    </div>
+</section>
 
 
-<div class ="age">
+
+
+</nav>
+
+<main>
+<div class ="div3">
 <p> Age: <span id ="age"></span></p>
 </div>
 
-
-<div class="rules">
-    <p> The rules are simple: </p>
-    <p> Keep your elf alive by eating, sleeping, and playing.</p>
-    <p> If any two stats reach 10 at same time, you elf dies.</p>
-    <p> If hunger OR boredom reach 20,</p>
-    <p></p> your elf will meet the same fate.</p>
-</div>
-
-
-
-
-
-<main>
-
-<div class="day">
+<div class="div4">
 <p> Day: <span id ="day"></span></p>   
 </div>
 
-<div class="hunger">
+<div class="div5">
  <p> Hunger: <span id ="hunger"></span></p>   
 </div>
 
-<div class="boredom">
+<div class="div6">
  <p> Boredom: <span id="boredom"></span></p>   
 </div>
 
-<div class="sleepiness">
+<div class="div7">
 <p> Sleepiness: <span id="sleepiness"></span></p>  
 </div>
-
 
 </main>
 
 
-
 <footer>
-
+<div class="div8">
     <button id="button1" class="button1">Feed Berries</button>
     <button id="button2" class="button2">Sleep zzz</button>
-    <button id="button3" class="button3">Play Game</button>
-
+    <button id="button3" class="button3">Play Flute</button>
+    <button id="button4" class="button4">Day Time</button>
+</div>
 </footer>
 
 
+<div id="evoledElf">
+    <img id="egg"  style="visibility: visible" src="egg.png" height="150px">
+    <img id="baby" style="visibility: hidden" src="baby-elf.png">
+    <img id="adult" style="visibility: hidden" src="evolved-elf.png">
+    <img id="dead" style="visibility: hidden" src="dead-elf.png">
+</div>
 
-<span id="img1"> <span>
-<img id="img2" style="display:none" alt="evolved elf">
-</div>>
-    
+</div>
+
+
 </body>
 </html>
