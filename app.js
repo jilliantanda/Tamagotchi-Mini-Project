@@ -170,13 +170,6 @@ function reset(){
 
 
 
-// Create buttons to:
-    // -feed your pet, -2 per feed berries
-        //- +2 sleepiness
-    //- make pet sleep  -3
-        //- 1 hunger
-    // - make pet play the flute, -1 boredom
-
 
 // Add the ability to name your pet.
 
@@ -184,18 +177,3 @@ function reset(){
     // Display character name on page. 
 
 
-    // every 10 seconds increases hunger by 2. If 20 is reached, character dies.
-    // every 10 seconds bordem increases by 1. If 20 is reached, character dies.
-    // every 10 seconds, sleepiness increases by 1. If 20 is reached, character dies.
-    // if boredom and sleepiness both reach 10 at the same time, character dies. 
-    // if hunger and sleepiness both reach 10 at the same time, character dies.
-    //  if hunger and boredom both reach 10 at the same time, character dies. 
-
-
-
-// Style the page.
-
-
-
-
-// Animate your pet across the screen while it's alive.
