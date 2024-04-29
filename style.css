@@ -207,6 +207,7 @@ header {
   position: relative;
   top: 70px; right: 65px;
  }
+
 #baby{
   position: relative;
   top: 70px; right: -75px;
@@ -220,11 +221,8 @@ header {
 
 
 
-
-
-
 .pets {
-  animation: slide 4s;
+  animation: slide 2s;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
   animation-direction: alternate;
@@ -246,13 +244,8 @@ header {
 
   }
 } to {
-  transform: translateX(0%)
+    transform: translateX(0%)
 }
 
-.ko {
-  animation: hover 4s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
-  position: relative;
-}
+
+

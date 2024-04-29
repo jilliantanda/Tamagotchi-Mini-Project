@@ -16,8 +16,6 @@ button3.onclick = playFlute
 button4.onclick = lightsOn
 
 
-
-
 let player = prompt("Name your elf: ", "Player name")
 if (player != null){
     document.getElementById("playerName").innerHTML =
@@ -35,7 +33,6 @@ const elf = {
 
 
 let day = 0;
-
 
 
 const interval1 = setInterval(dayIncrease, 5000)
@@ -90,6 +87,7 @@ function sleep(){
     currentSleepiness.innerHTML= elf.sleepiness;
     document.body.style.backgroundImage= "url('nighttime.gif')"
 }
+
 
 function lightsOn(){
     document.body.style.backgroundImage= "url('daytimes.gif')"
@@ -153,6 +151,7 @@ var deadElf = document.getElementById("dead")
 
 function reset(){
     document.body.style.backgroundImage= "url('death.gif')"
+    document.querySelector(".pets").style.animation = "hover 4s linear infinite"
     adultElf.style.visibility = "hidden"
     deadElf.style.visibility = "visible"
     elf.boredom = 0
@@ -169,9 +168,6 @@ function reset(){
 
 
 
-
-
-// Add the ability to name your pet.
 
     // Submit box- Welcome to the forest. Please select your characters name
     // Display character name on page. 
