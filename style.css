@@ -9,7 +9,8 @@ body {
     padding: 25px 25px 25px 2px;
     background-size:cover;
     color: black;
-    font-family: Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family: url('https://fonts.googleapis.com/css2?family=Jersey+20&display=swap');
+
 }
 
 #container {
@@ -180,6 +181,7 @@ header {
     color: rgb(255, 192, 203);
     width: 100px;
     height: 30px;
+
 }
 
 .button1{
