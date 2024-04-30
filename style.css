@@ -222,7 +222,7 @@ header {
 
 
 .pets {
-  animation: slide 2s;
+  animation: slide 3s;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
   animation-direction: alternate;
